@@ -1,0 +1,13 @@
+<h1>Weather Information</h1>
+
+<form>
+  <label for="city">Enter City Name:</label>
+  <input type="text" id="city" name="city">
+  <input type="submit" value="Get Temperature">
+</form>
+
+<% if @temperature %>
+  <p>The temperature in <%= params[:city] %> is <%= @temperature %>°C</p>
+<% elsif @error_message %>
+  <p><%= @error_message %></p>
+<% end %>
